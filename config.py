@@ -1,11 +1,16 @@
 import os
 
+import app
+
 
 class Config:
     """
     General parent configuration parent class
     """
     SECRET_KEY ='123456789'
+    app.config['DEBUG'] = True
+    app.config['SQLALCHEMY_DATABASE_URI'] = ''
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=271d1234d3f497eed5b1d80a07b3fcd1'
     # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:access@localhost/pitches'
     # SQLALCHEMY_TRACK_MODIFICATIONS = False
     # UPLOADED_PHOTOS_DEST = 'app/static/photos'

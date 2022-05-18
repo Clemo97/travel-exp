@@ -1,10 +1,15 @@
 from flask import Flask
 from flask_bootstrap import Bootstrap
 from config import config_options
+from flask_sqlalchemy import SQLAlchemy 
 
 
 # Initializing Flask Extensions
 bootstrap = Bootstrap()
+db = SQLAlchemy
+
+
+
 def create_app(config_name):
     app = Flask(__name__)
     # Creating the app configurations
@@ -20,6 +25,9 @@ def create_app(config_name):
     
     from post import post as post_blueprint
     app.register_blueprint(post_blueprint)
+
+    from .weathers import weather as weather_blueprint
+    app.register_blueprint(weather_blueprint)
 
     
 
