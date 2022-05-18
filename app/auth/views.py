@@ -17,8 +17,9 @@ def login():
 @auth.route('/register', methods=["GET","POST"])
 def register():
     form = RegistrationForm()
-    
-     
+    if form.validate_on_submit():
+        flash(f'{ form.username.data} your account has been created', 'success')
+        return redirect(url_for('login'))
     
     return render_template('register.html', form=form)
 
