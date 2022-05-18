@@ -11,35 +11,25 @@ def index():
    
 
 
-    return render_template()
+    return render_template('index.html')
 
 
 
-@main.route('/user/<>')
+@main.route('/user')
 def profile():
  
     return render_template()
 
-@main.route('/user/<>/update', methods=["GET","POST"])
+@main.route('/user/update', methods=["GET","POST"])
 @login_required
 def update_profile():
     
 
         
-    return render_template('profile/update.html')
+    return render_template('profile.html')
 
-@main.route('/user/<>/update/pic', methods=["POST"])
-@login_required
-def update_pic():
-   
-    return redirect(url_for('main.profile'))
 
-@main.route('/new/pitch', methods=["GET","POST"])
-@login_required
-def new_pitch():
-    
 
-    return render_template('pitch/new_pitch.html')
 
 
 
