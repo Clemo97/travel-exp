@@ -1,10 +1,11 @@
-{% extends "base.html"%}
+{%extends 'base.html'%}
 {% block content %}
+<div class="container">
 <div class="content-section">
     <form method="POST" action="">
         {{ form.hidden_tag() }}
         <fieldset>
-            <legend class="border-bottom mb-4">Register to get Started</legend>
+            <legend class="border-bottom mb-4 bg-dark">Register to get Started</legend>
             <div class="form-group">
                 {{ form.email.label(class = "form-control-label") }}
                 {{ form.email(class = "form-control form-control-lg") }}
@@ -30,7 +31,8 @@
 
 <div id="div2" class="border-top pt-3">
     <small class="text-muted">
-        You already have an account ? <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>
+        You already have an account ? <a class="ml-2" href="#">Sign In</a>
     </small>
+</div>
 </div>
 {% endblock content%}
