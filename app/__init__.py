@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 # Initializing Flask Extensions
-bootstrap = Bootstrap()
+
 db = SQLAlchemy
 
 
