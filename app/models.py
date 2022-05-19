@@ -1,13 +1,13 @@
 from . import db
 from werkzeug.security import generate_password_hash,check_password_hash
-from flask_login import UserMixin
+
 from . import login_manager
 from datetime import datetime
 # from sqlalchemy.orm import backref
 
 
 
-class User(UserMixin, db.Model):
+class User():
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(64), unique=True, index=True)

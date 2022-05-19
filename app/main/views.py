@@ -1,6 +1,6 @@
 from . import main
 from flask import render_template, request, redirect, url_for, abort
-from flask_login import login_required
+
 # # from ..models import User
 # from auth.form import UpdateProfile, PitchForm
 # from .. import db, photos
