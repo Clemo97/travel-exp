@@ -2,7 +2,7 @@ from flask import render_template, redirect, url_for, flash ,request
 import requests
 import urllib3
 
-from post.weathers import City
+
 from . import weather
 from app import db
 
