@@ -13,7 +13,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css"
             rel="stylesheet"
           />
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='travels.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@0;1&family=Prata&display=swap" rel="stylesheet">
@@ -39,18 +39,21 @@
             <i class="fas fa-bars"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto align-items-center">
-              <li class="nav-item">
+            <ul  class="navbar-nav ms-auto align-items-center">
+              <li id="nav-b" class="nav-item">
                 <a class="nav-link mx-2" href="{{ url_for('post.post_all') }}"><i class="fas fa-plus-circle pe-2"></i>Blogs</a>
               </li>
               
-              <li class="nav-item">
+              <li id="nav-b" class="nav-item">
                 <a class="nav-link mx-2" href="{{ url_for('main.index') }}"><i class="fas fa-heart pe-2"></i>Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link mx-2" href=""><i class="{{ url_for('main.recommend') }}"></i>Our Recommendations</a>
+              <li id="nav-b" class="nav-item">
+                <a class="nav-link mx-2" href="{{ url_for('api.weather_dashboard') }}"><i class="fas fa-sun"></i>Check weather</a>
               </li>
-              <li class="nav-item ms-3">
+              <li id="nav-b" class="nav-item">
+                <a class="nav-link mx-2" href="{{ url_for('main.recommend') }}"><i class="fas fa-plane-departure"></i>Our Recommendations</a>
+              </li>
+              <li id="nav-b" class="nav-item ms-3">
                 <a class="btn btn-black btn-rounded" href="{{ url_for('auth.login') }}">Log in</a>
               </li>
             </ul>

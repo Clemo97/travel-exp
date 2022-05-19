@@ -15,18 +15,14 @@ def index():
 
 
 
-@main.route('/user')
-def profile():
- 
-    return render_template()
 
-@main.route('/recommend', methods=["GET","POST"])
+
+@main.route('/recommend')
 def recommend():
-    
+   
 
-        
+
     return render_template('recommend.html')
-
 
 
 

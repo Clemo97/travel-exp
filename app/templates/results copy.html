@@ -1,14 +1,24 @@
+{% extends "base.html"%}
+{% block content %}
 
     <title>Results Page</title>
     
 
 </head>
 <body>
-<div id="weatherResults">
-    <h3>Weather in {{ location }}</h3>
-    <h2>{{ temp }}° C</h2>
-    <h3>{{ weather }}</h3>
-    <h4>Feels like: {{ feels_like }}° C</h4>
+<div class="container">
+    <div class="row">
+        <div class="col col-md-8">
+            <h1><i class="fas fa-cloud-meatball"></i>Weather in {{ location }}</h1>
+            <h2>Temperature: {{ temp }}° C</h2>
+            <h3>Weather:     {{ weather }}</h3>
+            <h4>Feels like:  {{ feels_like }}° C</h4>
+        
+        </div>
+    </div>
 </div>
+
 </body>
 </html>
+
+{%endblock%}

@@ -1,14 +1,13 @@
-<html>
-<head>
-    <title>Weather Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/home.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-</head>
+{% extends "base.html"%}
+{% block content %}
+
 <body>
 <h2 class="weatherText">Weather Dashboard in Flask</h2>
 <form class="weatherText" id="weatherForm" action="{{ url_for('api.render_results') }}" method="post">
-    Location Zip Code: <input class="weatherText" id="weatherInput" type="text" name="zipCode"><br>
+    Check Location: <input class="weatherText" id="weatherInput" type="text" name="zipCode"><br>
     <input class="weatherText" id="weatherSubmit" type="submit" value="Submit">
 </form>
 </body>
 </html>
+
+{%endblock%}
