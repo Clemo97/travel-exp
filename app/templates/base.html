@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 3edf4fc0046de8863573018966caab1b5b00ee65
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +48,7 @@
                 <a class="nav-link mx-2" href="{{ url_for('main.index') }}"><i class="fas fa-heart pe-2"></i>Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-2" href=""><i class="fas fa-heart pe-2"></i>Our Recommendations</a>
+                <a class="nav-link mx-2" href=""><i class="{{ url_for('main.recommend') }}"></i>Our Recommendations</a>
               </li>
               <li class="nav-item ms-3">
                 <a class="btn btn-black btn-rounded" href="{{ url_for('auth.login') }}">Log in</a>
@@ -205,10 +202,3 @@
     
 </body>
 </html>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 8b940469d79e4aa60fef75f740538e471aaf34b3
-=======
->>>>>>> 3edf4fc0046de8863573018966caab1b5b00ee65

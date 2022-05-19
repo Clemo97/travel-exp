@@ -20,13 +20,12 @@ def profile():
  
     return render_template()
 
-@main.route('/user/update', methods=["GET","POST"])
-@login_required
-def update_profile():
+@main.route('/recommend', methods=["GET","POST"])
+def recommend():
     
 
         
-    return render_template('profile.html')
+    return render_template('recommend.html')
 
 
 

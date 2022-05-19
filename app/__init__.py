@@ -1,18 +1,15 @@
 from ensurepip import bootstrap
 from flask import Flask
 
-from flask_bootstrap import Bootstrap
-from flask_mail import Mail
-from flask_moment import Moment
-from flask_login import LoginManager
+
 
 from config import config_options
-from flask_sqlalchemy import SQLAlchemy 
+ 
 
 
 # Initializing Flask Extensions
 
-db = SQLAlchemy
+
 
 
 
@@ -33,6 +30,10 @@ def create_app(config_name):
     
     from post import post as post_blueprint
     app.register_blueprint(post_blueprint)
+
+    from .api import api as api_blueprint
+    app.register_blueprint(api_blueprint)
+
 
     # from .weathers import weather as weather_blueprint
     # app.register_blueprint(weather_blueprint)
