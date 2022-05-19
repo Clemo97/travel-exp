@@ -28,7 +28,7 @@ def render_results():
 
 def get_weather_results(zip_code, api_key):
     api_url = "http://api.openweathermap.org/" \
-              "data/2.5/weather?q={}&units=imperial&appid={}".format(zip_code, api_key)
+              "data/2.5/weather?q={}&units=metric&appid={}".format(zip_code, api_key)
     r = requests.get(api_url)
     return r.json()
 
