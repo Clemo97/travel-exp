@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 from app import create_app
+=======
+import os
+import click
+from flask_migrate import Migrate
+from app import create_app,db
+from app.models import User
+>>>>>>> 37784d7e5f883dcbda6d831b929a4f6d3ce1a660
 from flask_script import Manager ,Server
 # Creating app instance
 
