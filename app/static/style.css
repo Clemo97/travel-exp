@@ -6,6 +6,14 @@
       color: rgb(39, 15, 1)26, 123, 153;
   }
 
+  .content-section{
+    background:whitesmoke;
+    padding: 10px 20px;
+    border: 1px solid #bdb9b9;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
 
   #maindiv{
     display: flex;
