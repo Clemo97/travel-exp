@@ -8,17 +8,24 @@ from flask_login import login_required
 
 @main.route('/')
 def index():
+   
+
+
     return render_template('index.html')
+
 
 
 @main.route('/user')
 def profile():
+ 
     return render_template()
-
 
 @main.route('/user/update', methods=["GET","POST"])
 @login_required
 def update_profile():
+    
+
+        
     return render_template('profile.html')
 
 
