@@ -13,6 +13,7 @@ def login():
         if form.email.data == 'collo@gmail.com' and form.password.data == 'password':
             flash('You have successfully logged in', 'success')
             return redirect (url_for('main.index'))
+           
         else:
             flash('Unsuccessful log in', 'danger')
     return render_template('login.html', form=form)
