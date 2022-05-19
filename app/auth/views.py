@@ -12,7 +12,7 @@ def login():
     if form.validate_on_submit():
         if form.email.data == 'collo@gmail.com' and form.password.data == 'password':
             flash('You have successfully logged in', 'success')
-            return redirect (url_for('home'))
+            return redirect (url_for('main.index'))
         else:
             flash('Unsuccessful log in', 'danger')
     return render_template('login.html', form=form)
@@ -23,7 +23,7 @@ def register():
     form = RegistrationForm()
     if form.validate_on_submit():
         flash(f'{ form.username.data} your account has been created', 'success')
-        return redirect(url_for('home'))
+        return redirect(url_for('auth.login'))
     
     return render_template('register.html', form=form)
 
