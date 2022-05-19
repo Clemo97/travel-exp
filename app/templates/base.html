@@ -1,62 +1,214 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3edf4fc0046de8863573018966caab1b5b00ee65
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+            />
+            <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css"
+            rel="stylesheet"
+          />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@0;1&family=Prata&display=swap" rel="stylesheet">
    <title> Travels Exp</title>
 </head>
-<body>
-    <header class="site-header">
-        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
-            <div class="container">
-                <a href="" class="navbar-brand mr-4">Travel-Exp</a>
-                <button class="navbar-toggleer-icon" type="button" data-toggle="collapse" data-target="#collapseExample">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarToggle">
-                    <div class="navbar-nav mr-auto">
-                        <a href="#" class="nav-item nav-link">Home</a>
-                        <a href="#" class="nav-item nav-link">About</a>
-                    </div>
-
-                    <div class="navbar-nav">
-                       
-                        <a href="#" class="nav-item nav-link">Register</a>
-                        <a href="#" class="nav-item nav-link">Login</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main class="container">
-        <div class="row">
-            <div class="col-md-9">
-                {% with messages = get_flashed_messages(with_categories=true) %}
-                   {% if messages %}
-                       {% for category, message in messages %}
-                       <div class="alert alert-{{ category }}">
-                         {{ message }}
-                       </div>
-                       {% endfor %}
-                   {% endif %}
-                {% endwith %}
-
-                {% block content %}{% endblock %}
-            </div>
-            <div class="col-md-3">
-            </div>
+  
+   
+<body style="font-family: 'Prata', serif;">
+  
+    <nav class="navbar navbar-expand-lg bg-light navbar-light mb-3">
+        <div class="container">
+          <a class="navbar-brand" href="#" style="font-family: 'Great Vibes', cursive; font-size: 20px;"
+            >Travel <span style="color: brown; font-family: 'Playfair Display', serif;">-Exp </span></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="{{ url_for('post.post_all') }}"><i class="fas fa-plus-circle pe-2"></i>Blogs</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="{{ url_for('main.index') }}"><i class="fas fa-heart pe-2"></i>Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href=""><i class="fas fa-heart pe-2"></i>Our Recommendations</a>
+              </li>
+              <li class="nav-item ms-3">
+                <a class="btn btn-black btn-rounded" href="{{ url_for('auth.login') }}">Log in</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </main>
+      </nav>
+      <!-- Navbar -->
+         
+               
+        
+           
+          
+           {%block content %} {%endblock %}
+            
+            <!-- Background image -->
+          
+        
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+    <footer class="text-center text-white" style="background-color: #caced1;">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!-- Section: Images -->
+          <section class="">
+            <div class="row">
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/111.webp"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/112.webp"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/114.webp"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/115.webp"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/116.webp"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Section: Images -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2022 Copyright:Travel-exp
+          <a class="text-white" href="https://mdbootstrap.com/">Travel-Exp.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    
+
+      <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"
+    ></script>
+    
 </body>
 </html>
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 8b940469d79e4aa60fef75f740538e471aaf34b3
+=======
+>>>>>>> 3edf4fc0046de8863573018966caab1b5b00ee65
