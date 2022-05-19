@@ -5,3 +5,68 @@
   span{
       color: rgb(39, 15, 1)26, 123, 153;
   }
+
+  .content-section{
+    background:whitesmoke;
+    padding: 10px 20px;
+    border: 1px solid #bdb9b9;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+
+  #maindiv{
+    display: flex;
+    margin-top: 7%;
+    border: 1px solid ( 109.6deg,  rgba(5,84,94,1) 16%, #bbb 91.1% );;
+    height: 580px;
+    border-radius: 10px;
+    background-image: linear-gradient( 109.6deg,  rgba(5,84,94,1) 16%, #bbb 91.1% );
+
+}
+#maindiv2{
+
+    height: 120px;
+    margin-top: 4%;
+    text-align: center;
+}
+.card{
+    margin-left: 5%;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 5%;
+    height: 200px;
+   
+}
+ul{
+   border-radius: 10px;
+}
+li{
+    margin-top: 5%;
+}
+li:hover{
+  font-weight: bold;
+  background-color: black;
+  color: white;
+}
+.span1{
+    color:  rgba(5,84,94,1) ;
+}
+.h5{
+    text-decoration: underline;
+    text-decoration-color: rgba(5,84,94,1);
+}
+.images{
+    height: 200px;
+    width: 285px;
+}
+#cards1{
+    height: 300px;
+    text-align: justify;
+}
+#recommend{
+    margin-top: 2%;
+}
+#row1{
+    text-align: center;
+}  
