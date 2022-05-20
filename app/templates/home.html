@@ -1,13 +1,28 @@
 {% extends "base.html"%}
 {% block content %}
 
-<body>
-<h2 class="weatherText">Weather Dashboard in Flask</h2>
-<form class="weatherText" id="weatherForm" action="{{ url_for('api.render_results') }}" method="post">
-    Check Location: <input class="weatherText" id="weatherInput" type="text" name="zipCode"><br>
-    <input class="weatherText" id="weatherSubmit" type="submit" value="Submit">
-</form>
-</body>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-6">
+          <h2 class="weatherText">Travel-exp Weather Dashboard</h2>
+            <form class="form-outline" id="weatherForm" action="{{ url_for('api.render_results') }}" method="post">
+               Check Location: <input class="weatherText" id="weatherInput" type="text" name="zipCode"><br>
+               
+
+               <input class="btn btn-light btn-lg btn-rounded gradient-custom text-body px-5 mt-3" id="weatherSubmit" type="submit" value="Submit">
+           </form>
+        </div>
+       <div class="col-md-6">
+          <img
+              src="https://icon-library.com/images/weather-icon-gif/weather-icon-gif-19.jpg"
+              alt="Trendy Pants and Shoes"
+              class="img-fluid rounded-start"
+            />
+        </div>
+
+    </div>
+</div>
 </html>
 
 {%endblock%}
